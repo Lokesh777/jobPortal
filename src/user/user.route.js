@@ -12,6 +12,9 @@ app.post("/register",async(req,res)=>{
     if (user) {
         return res.send({ message: "user already exists,please login" });
       }
+    // if (null === user) {
+    //     return res.send({ message: "Please enter the Signup credential!!!" });
+    //   }
 
       await User.create({
         name,email,password
@@ -48,11 +51,6 @@ app.post("/login",async (req, res) => {
     
       return res.send({status:true, message: "login successful", token });
 })
-
-
-
-
-
 
 app.get("/",async(req,res)=>{
     let user=await User.find()

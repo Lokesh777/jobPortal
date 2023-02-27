@@ -6,8 +6,8 @@ const connect = () =>{
 
     mongoose.set("strictQuery",false);
 
-    return mongoose.connect(process.env.MONGODB_URl,{
-        useNewUrlParser:true,
+    return mongoose.connect(process.env.MONGODB_URL,{
+           useNewUrlParser:true,
         useUnifiedTopology:true
     },
     (error)=>{

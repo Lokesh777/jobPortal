@@ -16,6 +16,10 @@ const JobSchema = new mongoose.Schema({
     location: {
         type: String,
         required: true
+    },
+    image: {
+        type: String,
+        required: true
     }
 });
 
