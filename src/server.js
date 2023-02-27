@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({origin:true,credentials:true}));
 app.use(express.json()); 
 
-app.use("/user",UserRouter);      
-app.use("/user",jobRouter);
+// app.use("/user",UserRouter);      
+// app.use("/user",jobRouter);
 app.use("/user",movieRouter)      
 
 app.get("/",(req,res)=>{
